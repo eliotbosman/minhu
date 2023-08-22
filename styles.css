@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1, h2, body {
+    font-family: 'Hershey-Noailles-OldFrench';
+}
+
+p, li, nav {
+    font-size: 16pt;
+}
+
+nav {
+    margin-top: 28vh;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+}
+
+.left-field {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    overflow: auto;
+}
+
+.right-column {
+    position: relative;
+    padding: 20px;
+    overflow: scroll;
+    max-height: 100vh;
+}
+
+#project-details {
+    text-align: justify;
+    margin-left: 5vw; margin-right: 5vw;
+}
+
+#project-details h2 {
+    font-size: 25pt;
+}
+
+#project-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ol {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 0.5vh;
+    border-bottom: solid black 1px;
+}
+
+img {
+    max-width: 100%; max-height: 100%;
+}
+
+/* Add more styling as needed */
+
+@font-face {
+    font-family: 'Hershey-Noailles-OldFrench';
+    src: url('fonts/Hershey-Noailles-OldFrench-Bold.woff2') format('woff2'),
+        url('fonts/Hershey-Noailles-OldFrench-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr; /* Full-width column for mobile */
+    }
+
+    .left-field {
+        position: relative; /* Remove sticky positioning for mobile */
+        top: 0;
+        padding: 10px; /* Reduce padding for mobile */
+        overflow: visible;
+    }
+
+    .right-column {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    #project-details {
+        margin: 0 10px; /* Adjust margins for smaller screens */
+    }
+
+    #project-images {
+        display: flex;
+        flex-direction: column; /* Stack images vertically for mobile */
+        align-items: center;
+    }
+
+    li {
+        margin-left: -12vw;
+    }
+
+    nav { 
+        display: none;
+    }
+
+    h2, h1 { margin-left: -1.5vw;}
+    
+}
